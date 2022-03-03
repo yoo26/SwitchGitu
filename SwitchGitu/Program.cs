@@ -8,9 +8,11 @@ namespace ProgramKonversi
 {
     class ProgramSuhu
     {
-        double celcius, fahrenheit, reamur, kelvin; //DEKLARASI
+        /// <summary>
+        /// Deklarasi
+        /// </summary>
+        double celcius, fahrenheit, reamur, kelvin;
 
-        //INPUT
         public void inputCelcius()
         {
             Console.WriteLine(" =========================================");
@@ -20,8 +22,6 @@ namespace ProgramKonversi
             Console.Write(" Masukkan suhu (Celcius) = "); 
             celcius = Convert.ToDouble(Console.ReadLine());
         }
-
-        //INPUT
         public void inputFahrenheit()
         {
             Console.WriteLine(" =========================================");
@@ -31,8 +31,6 @@ namespace ProgramKonversi
             Console.Write(" Masukkan suhu (Fahrenheit) = "); 
             fahrenheit = Convert.ToDouble(Console.ReadLine());
         }
-
-        //INPUT
         public void inputReamur()
         {
             Console.WriteLine(" =========================================");
@@ -43,7 +41,9 @@ namespace ProgramKonversi
             reamur = Convert.ToDouble(Console.ReadLine());
         }
 
-        //INPUT
+        /// <summary>
+        /// Method Input Kelvin
+        /// </summary>
         public void inputKelvin()
         {
             Console.WriteLine(" =========================================");
@@ -53,7 +53,10 @@ namespace ProgramKonversi
             Console.Write(" Masukkan suhu (Kelvin) = "); 
             kelvin = Convert.ToDouble(Console.ReadLine());
         }
-        //RUMUS
+        /// <summary>
+        /// Method Operasi Aritmatika
+        /// </summary>
+        /// <param name="c"></param>
         public void konversiCelcius(double c)
         {
             fahrenheit = (c * 1.8) + 32;
@@ -61,8 +64,6 @@ namespace ProgramKonversi
             kelvin = c + 273.15;
             Console.WriteLine("\n");
         }
-
-        //RUMUS
         public void konversiFahrenheit(double f)
         {
             celcius = (f - 32) * 5 / 9;
@@ -70,8 +71,6 @@ namespace ProgramKonversi
             kelvin = (f - 32) * 5 / 9 + 273.15;
             Console.WriteLine("\n");
         }
-
-        //RUMUS
         public void konversiReamur(double r)
         {
             celcius = r * 5 / 4;
@@ -79,8 +78,6 @@ namespace ProgramKonversi
             kelvin = r * 5 / 4 + 273;
             Console.WriteLine("\n");
         }
-
-        //RUMUS
         public void konversiKelvin(double k)
         {
             celcius = k - 273.15;
@@ -88,11 +85,12 @@ namespace ProgramKonversi
             reamur = (k - 273) * 4 / 5;
             Console.WriteLine("\n");
         }
-
+        /// <summary>
+        /// Method Untuk Menampilkan Hasil
+        /// </summary>
         public void hasilCelcius()
         {
             Console.Clear();
-            //Output Hasil
             Console.WriteLine(" ========================================");
             Console.WriteLine(" |    Hasil Konversi Suhu From Celcius");
             Console.WriteLine(" ========================================");
@@ -108,7 +106,6 @@ namespace ProgramKonversi
         public void hasilFahrenheit()
         {
             Console.Clear();
-            //Output Hasil
             Console.WriteLine(" ========================================");
             Console.WriteLine(" |    Hasil Konversi Suhu From Fahrenheit");
             Console.WriteLine(" ========================================");
@@ -124,7 +121,6 @@ namespace ProgramKonversi
         public void hasilReamur()
         {
             Console.Clear();
-            //Output Hasil
             Console.WriteLine(" ========================================");
             Console.WriteLine(" |    Hasil Konversi Suhu From Reamur");
             Console.WriteLine(" ========================================");
@@ -140,7 +136,6 @@ namespace ProgramKonversi
         public void hasilKelvin()
         {
             Console.Clear();
-            //Output Hasil
             Console.WriteLine(" ========================================");
             Console.WriteLine(" |    Hasil Konversi Suhu From Kelvin");
             Console.WriteLine(" ========================================");
@@ -153,7 +148,9 @@ namespace ProgramKonversi
             Console.Clear();
         }
 
-        //Tampilan Awal (Switch)
+        /// <summary>
+        /// Switch
+        /// </summary>
         public void mainMenu()
         {
             ProgramSuhu ps = new ProgramSuhu();
@@ -199,7 +196,10 @@ namespace ProgramKonversi
 
             }
         }
-        //Memanggil menu switch (ps) sebagai tampilan awal saat run
+        /// <summary>
+        /// Memanggil Switch Pada Halaman Awal
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             ProgramSuhu ps = new ProgramSuhu();
